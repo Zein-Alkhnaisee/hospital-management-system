@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/hospital-management-system/static/css/main.aad734ab.css",
+    "main.js": "/hospital-management-system/static/js/main.c1758a21.js",
+    "static/js/453.f18d65e5.chunk.js": "/hospital-management-system/static/js/453.f18d65e5.chunk.js",
+    "static/media/messagehospital.mp4": "/hospital-management-system/static/media/messagehospital.36d25bffb3adeb479f4c.mp4",
+    "static/media/ourfuture.mp4": "/hospital-management-system/static/media/ourfuture.e2c86d196b6f7cb9f483.mp4",
+    "static/media/1746111149891.jpg": "/hospital-management-system/static/media/1746111149891.c3cc47cb3a91cd42a8d5.jpg",
+    "static/media/1746108227843.jpg": "/hospital-management-system/static/media/1746108227843.d3e1c8b14acca8d6e346.jpg",
+    "static/media/bootstrap-icons.woff?": "/hospital-management-system/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
+    "static/media/bootstrap-icons.woff2?": "/hospital-management-system/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
+    "static/media/red-cross.jpg": "/hospital-management-system/static/media/red-cross.0246efe3be24a0dbef3d.jpg",
+    "static/media/1755248454125.jpg": "/hospital-management-system/static/media/1755248454125.d5b10a568b3475dad1f3.jpg",
+    "static/media/1755248454042.jpg": "/hospital-management-system/static/media/1755248454042.f342bde792e653bd25b0.jpg",
+    "static/media/1755248454088.jpg": "/hospital-management-system/static/media/1755248454088.2c87936a111b4f04f594.jpg",
+    "static/media/6.jpg": "/hospital-management-system/static/media/6.eedef675e543fcc0e2de.jpg",
+    "static/media/HomeNursing.jpg": "/hospital-management-system/static/media/HomeNursing.103ed455fcbd82853155.jpg",
+    "static/media/camp.jpg": "/hospital-management-system/static/media/camp.86bb2af3dd8f62a9db00.jpg",
+    "static/media/tecnolog.jpg": "/hospital-management-system/static/media/tecnolog.a4f4f8302581df6c7d8a.jpg",
+    "static/media/award.jpg": "/hospital-management-system/static/media/award.120c21c7b875b6a0c456.jpg",
+    "static/media/MedicalRecords.jpg": "/hospital-management-system/static/media/MedicalRecords.3106bdce81e9128672e4.jpg",
+    "static/media/alliance.jpg": "/hospital-management-system/static/media/alliance.5fef655bf83a6d56e102.jpg",
+    "static/media/CardiacCare.jpg": "/hospital-management-system/static/media/CardiacCare.ac9597e39254342a8092.jpg",
+    "static/media/car.jpg": "/hospital-management-system/static/media/car.557612f8a3c7e9c9584c.jpg",
+    "static/media/doctors-without-borders.jpg": "/hospital-management-system/static/media/doctors-without-borders.eeb3231f7f250c8be55c.jpg",
+    "index.html": "/hospital-management-system/index.html",
+    "main.aad734ab.css.map": "/hospital-management-system/static/css/main.aad734ab.css.map",
+    "main.c1758a21.js.map": "/hospital-management-system/static/js/main.c1758a21.js.map",
+    "453.f18d65e5.chunk.js.map": "/hospital-management-system/static/js/453.f18d65e5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aad734ab.css",
+    "static/js/main.c1758a21.js"
+  ]
+}
