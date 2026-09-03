@@ -1,0 +1,32 @@
+@keyframes wallet-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wallet-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.wallet-fade-in {
+  animation: wallet-fade-in 0.5s ease-out;
+}
+
+.wallet-card-hover {
+  transition: all 0.3s ease;
+}
+
+.wallet-card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}

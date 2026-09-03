@@ -1,0 +1,87 @@
+.ratings-section-pa {
+  padding: 4rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--title-color);
+}
+
+.ratings-title-pa {
+  font-size: 2rem;
+  color: var(--title-color);
+  margin-bottom: 5rem;
+}
+
+.ratings-list-pa {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+
+.rating-card-pa {
+  background: #333;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.rating-header-pa {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.rating-comment-pa {
+  font-style: italic;
+}
+
+.rating-form-pa {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.rating-form h3 {
+  margin-bottom: 1.5rem;
+  color: var(--title-color);
+}
+
+.rating-form-pa input,
+.rating-form-pa select,
+.rating-form-pa textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.rating-form-pa input:focus,
+.rating-form-pa select:focus,
+.rating-form-pa textarea:focus {
+  border-color: var(--title-color);
+  outline-color: var(--title-color);
+}
+
+.rating-form-pa button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.rating-form-pa button:hover {
+  background: var(--primary-hover);
+}
+textarea {
+  resize: none !important;
+}

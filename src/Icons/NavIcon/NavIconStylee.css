@@ -1,0 +1,6 @@
+.nav-icone h2 {
+  margin-left: 0 !important;
+  margin-top: 0 !important;
+  font-size: 40px;
+  color: var(--primary-color);
+}

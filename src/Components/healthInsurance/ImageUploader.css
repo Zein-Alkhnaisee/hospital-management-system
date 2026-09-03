@@ -1,0 +1,81 @@
+.hi-image-uploader {
+  margin-bottom: 1.5rem;
+}
+
+.hi-upload-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  border-left: 4px solid #dc3545;
+}
+
+.hi-image-preview-container {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.hi-image-preview {
+  max-height: 150px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e9ecef;
+}
+
+.hi-upload-area {
+  border: 2px dashed #dee2e6;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hi-upload-area:hover {
+  border-color: #4da6ff;
+  background-color: #e8f4ff;
+}
+
+.hi-upload-label {
+  background: linear-gradient(135deg, #4da6ff 0%, #3399ff 100%);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(77, 166, 255, 0.3);
+  display: inline-block;
+  cursor: pointer;
+}
+
+.hi-upload-label:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(77, 166, 255, 0.4);
+}
+
+.hi-upload-input {
+  display: none;
+}
+
+.hi-upload-hint {
+  color: #6c757d;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.hi-change-image-btn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.hi-change-image-btn:hover {
+  background-color: #5a6268;
+}

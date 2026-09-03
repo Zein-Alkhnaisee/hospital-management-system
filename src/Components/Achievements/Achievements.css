@@ -1,0 +1,55 @@
+.achievements-section {
+  padding: 4rem 2rem;
+  border-bottom: 1px solid var(--title-color);
+}
+.achievements-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: var(--title-color);
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 1rem 0;
+  max-width: 700px;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.timeline-icon {
+  font-size: 2rem;
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-content {
+  background: #fff;
+  padding: 1rem 1.2rem;
+  border-left: 4px solid var(--primary-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  transition: box-shadow 0.5s ease, transform 0.5s ease;
+}
+.timeline-content:hover {
+  box-shadow: 0 8px 20px rgba(0, 51, 128, 0.3);
+  transform: scale(1.05);
+}
+
+.timeline-content h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}

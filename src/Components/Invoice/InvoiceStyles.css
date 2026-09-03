@@ -1,0 +1,137 @@
+.invoice-container,
+.payments-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.error {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.error {
+  color: #d32f2f;
+}
+
+.invoices-list,
+.payments-list {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.invoice-card,
+.payment-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.invoice-header,
+.payment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.status.paid {
+  background: #4caf50;
+  color: white;
+}
+
+.status.partial {
+  background: #ff9800;
+  color: white;
+}
+
+.status.pending {
+  background: #f44336;
+  color: white;
+}
+
+.amounts {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.amounts span {
+  font-weight: bold;
+}
+
+.pay-button {
+  background: #2196f3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pay-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.payment-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.invoice-details-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.invoice-info,
+.appointment-info,
+.payments-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.payment-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.payment-item:last-child {
+  border-bottom: none;
+}

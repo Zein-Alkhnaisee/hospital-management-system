@@ -1,0 +1,157 @@
+.hi-form-card {
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #dee2e6;
+}
+
+.hi-form-header {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.hi-form-header h5 {
+  margin: 0;
+  color: #0f5092;
+  font-weight: 600;
+}
+
+.hi-form-body {
+  padding: 1.5rem;
+  background-color: #fff;
+}
+
+.hi-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.hi-form-label {
+  color: #0f5092;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.hi-form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.hi-form-control:focus {
+  border-color: #4da6ff;
+  box-shadow: 0 0 0 0.2rem rgba(77, 166, 255, 0.25);
+  outline: none;
+}
+
+.hi-form-control.is-invalid {
+  border-color: #dc3545;
+}
+
+.hi-invalid-feedback {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.hi-form-text {
+  color: #6c757d;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.hi-form-alert {
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+.hi-alert-success {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+
+.hi-alert-danger {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+.hi-form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.hi-cancel-btn {
+  background-color: #6c757d;
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.hi-cancel-btn:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+}
+
+.hi-submit-btn {
+  background: linear-gradient(135deg, #4da6ff 0%, #3399ff 100%);
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(77, 166, 255, 0.3);
+}
+
+.hi-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(77, 166, 255, 0.4);
+}
+
+.hi-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.hi-submit-spinner {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: hi-spin 1s linear infinite;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+@keyframes hi-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 576px) {
+  .hi-form-buttons {
+    flex-direction: column;
+  }
+
+  .hi-form-buttons button {
+    width: 100%;
+  }
+}

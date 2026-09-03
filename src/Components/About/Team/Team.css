@@ -1,0 +1,349 @@
+.doctors-section-team {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+
+.with-nav {
+  margin-top: 70px;
+}
+
+.team-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.team-header h2 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.team-header p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.doctor-grid-team {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.doctor-card-team {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-card-team:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.doctor-image-team {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.doctor-image-team img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.doctor-card-team:hover .doctor-image-team img {
+  transform: scale(1.05);
+}
+
+.doctor-info-team {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-info-team h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.doctor-details-team {
+  margin-bottom: 1.5rem;
+}
+
+.specialty-team,
+.experience-team {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.specialty-team svg,
+.experience-team svg {
+  margin-right: 0.5rem;
+  color: #3498db;
+  width: 16px;
+}
+
+.view-doctor-btn-team {
+  display: inline-block;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.view-doctor-btn-team:hover {
+  background: linear-gradient(135deg, #2980b9 0%, #2471a3 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.view-all-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.view-all-doctors-btn {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(106, 17, 203, 0.25);
+}
+
+.view-all-doctors-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(106, 17, 203, 0.35);
+}
+
+.btn-icon {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.view-all-doctors-btn:hover .btn-icon {
+  transform: translateX(3px);
+}
+
+.all-doctors-link-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.all-doctors-link {
+  display: inline-flex;
+  align-items: center;
+  color: #3498db;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.all-doctors-link:hover {
+  color: #2980b9;
+  background-color: rgba(52, 152, 219, 0.1);
+  transform: translateY(-2px);
+}
+
+.link-icon {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.all-doctors-link:hover .link-icon {
+  transform: translateX(3px);
+}
+
+.team-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 15px;
+  margin: 2rem auto;
+  max-width: 600px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.team-loading .spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(52, 152, 219, 0.2);
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.team-loading .spinner::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: 2px solid rgba(52, 152, 219, 0.1);
+  border-radius: 50%;
+}
+
+.team-loading p {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+.team-loading p::after {
+  content: "";
+  animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+  0% {
+    content: ".";
+  }
+  33% {
+    content: "..";
+  }
+  66% {
+    content: "...";
+  }
+  100% {
+    content: ".";
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.team-loading {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.team-error {
+  text-align: center;
+  padding: 3rem;
+  color: #2c3e50;
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.team-error .error-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #e63946;
+}
+
+.team-error h3 {
+  color: #e63946;
+  margin-bottom: 1rem;
+}
+
+.team-error p {
+  color: #6c757d;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.retry-btn {
+  padding: 0.8rem 1.5rem;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.retry-btn:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .doctors-section-team {
+    padding: 2rem 1rem;
+  }
+
+  .team-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .doctor-grid-team {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .doctor-image-team {
+    height: 200px;
+  }
+
+  .team-loading {
+    min-height: 40vh;
+    margin: 1rem;
+  }
+
+  .team-loading .spinner {
+    width: 50px;
+    height: 50px;
+  }
+
+  .team-loading p {
+    font-size: 1.1rem;
+  }
+}

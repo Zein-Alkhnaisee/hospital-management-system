@@ -1,0 +1,269 @@
+.record-details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.record-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.back-button {
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 1rem;
+}
+
+.back-button:hover {
+  background-color: #3a5a80;
+  transform: translateY(-2px);
+}
+
+.record-details-container h1 {
+  color: #2c3e50;
+}
+
+.record-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.record-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-item span:first-child {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.meta-item span:last-child {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.status-paid {
+  color: #28a745;
+  font-weight: 500;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section h2 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.diagnosis-content,
+.treatment-content {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  line-height: 1.6;
+}
+
+.doctor-info {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.doctor-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.avatar-initials {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #4a6fa5;
+}
+
+.doctor-details h3 {
+  margin: 0 0 0.5rem;
+  color: #2c3e50;
+}
+
+.specialty {
+  color: #6c757d;
+  font-size: 1rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.count-badge {
+  background-color: #4a6fa5;
+  color: white;
+  padding: 0.2rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-left: 1rem;
+}
+
+.appointments-list,
+.prescriptions-list {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.appointment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.appointment-item:last-child {
+  border-bottom: none;
+}
+
+.appointment-date {
+  flex: 2;
+  color: #495057;
+}
+
+.appointment-status {
+  flex: 1;
+  text-align: center;
+}
+
+.status-pending {
+  color: #ffc107;
+  font-weight: 500;
+}
+
+.status-confirmed {
+  color: #17a2b8;
+  font-weight: 500;
+}
+
+.status-completed {
+  color: #28a745;
+  font-weight: 500;
+}
+
+.invoice-info {
+  flex: 2;
+  text-align: right;
+}
+
+.invoice-status {
+  font-size: 0.9rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.paid {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.partial {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.unpaid {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.prescription-item {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.prescription-item:last-child {
+  border-bottom: none;
+}
+
+.medication-name {
+  flex: 2;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.dosage {
+  flex: 1;
+  color: #6c757d;
+}
+
+.view-all-prescriptions {
+  text-align: center;
+  padding: 1rem;
+}
+
+.view-all-prescriptions a {
+  color: #4a6fa5;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.view-all-prescriptions a:hover {
+  text-decoration: underline;
+}
+
+.loading-container,
+.error-container,
+.no-record {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  text-align: center;
+}
+
+.error-container button,
+.no-record button {
+  padding: 0.6rem 1.2rem;
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0.5rem;
+}

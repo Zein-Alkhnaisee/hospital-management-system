@@ -1,0 +1,151 @@
+.payment-list-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  margin: 100px;
+}
+
+.payment-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.payment-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.payment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.payment-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.payment-info {
+  flex: 1;
+}
+
+.payment-id {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.invoice-id,
+.payment-date {
+  font-size: 14px;
+  color: #718096;
+  margin-bottom: 5px;
+}
+
+.payment-amount-container {
+  text-align: right;
+}
+
+.payment-amount {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.invoice-status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.invoice-status.pending {
+  background-color: #fed7d7;
+  color: #c53030;
+}
+
+.invoice-status.partial {
+  background-color: #feebcb;
+  color: #d69e2e;
+}
+
+.invoice-status.paid {
+  background-color: #c6f6d5;
+  color: #2f855a;
+}
+
+.payment-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.appointment-info {
+  flex: 1;
+}
+
+.doctor-name,
+.appointment-date {
+  font-size: 14px;
+  color: #718096;
+  margin-bottom: 5px;
+}
+
+.no-payments {
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.payment-error {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+}
+
+.payment-error {
+  color: #e53e3e;
+}
+
+@media (max-width: 768px) {
+  .payment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-header {
+    flex-direction: column;
+  }
+
+  .payment-amount-container {
+    text-align: left;
+    margin-top: 15px;
+  }
+
+  .payment-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .details-button {
+    margin-top: 15px;
+    align-self: flex-end;
+  }
+}

@@ -1,0 +1,608 @@
+:root {
+  --primary-color: #4da6ff;
+  --secondary-color: #2764ae;
+  --accent-color: #e74c3c;
+  --glass-bg: rgba(182, 218, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.25);
+  --glass-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradient-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.login-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #bcdcfa, #93c9ff, #6dbbff);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* دوائر متوازنة */
+.decor-element {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  z-index: 0;
+  animation: float 20s infinite ease-in-out;
+  opacity: 0.7;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(15px, 20px);
+  }
+}
+
+.circle-1 {
+  width: 250px;
+  height: 250px;
+  top: 10%;
+  right: 15%;
+  animation-delay: 0s;
+  background: radial-gradient(
+    circle,
+    rgba(77, 166, 255, 0.2) 0%,
+    rgba(77, 166, 255, 0) 70%
+  );
+}
+
+.circle-2 {
+  width: 180px;
+  height: 180px;
+  bottom: 15%;
+  left: 15%;
+  animation-delay: 3s;
+  background: radial-gradient(
+    circle,
+    rgba(39, 100, 174, 0.2) 0%,
+    rgba(39, 100, 174, 0) 70%
+  );
+}
+
+.circle-3 {
+  width: 120px;
+  height: 120px;
+  top: 50%;
+  left: 25%;
+  animation-delay: 6s;
+  background: radial-gradient(
+    circle,
+    rgba(231, 76, 60, 0.2) 0%,
+    rgba(231, 76, 60, 0) 70%
+  );
+}
+
+.login-form {
+  /* background: var(--glass-bg); */
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  width: 100%;
+  max-width: 700px;
+  z-index: 10;
+  animation: fadeInUp 0.8s ease-out forwards;
+  transition: var(--transition);
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* إطار متحرك عند التركيز على الحقول */
+.login-form:focus-within::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  background-size: 200% 200%;
+  border-radius: 23px;
+  z-index: -1;
+  animation: gradient-border 4s ease infinite;
+  opacity: 1;
+}
+
+.login-form::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  background-size: 200% 200%;
+  border-radius: 23px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.login-form:hover::before {
+  opacity: 0.5;
+}
+
+.login-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(31, 38, 135, 0.2);
+}
+
+.login-form h2 {
+  margin-bottom: 30px;
+  color: #2c3e50;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.login-form h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border-radius: 2px;
+}
+
+.up-input {
+  width: 100%;
+  /* margin-bottom: 25px; */
+  position: relative;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #152739;
+  font-size: 1.1rem;
+}
+
+.login-form input,
+.login-form select {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  padding: 20px 25px;
+  border: 2px solid #e0e7ff;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: var(--transition);
+  outline: none;
+  color: #2c3e50;
+}
+
+.login-form input:focus,
+.login-form select:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 4px rgba(77, 166, 255, 0.2);
+  transform: scale(1.01);
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+}
+
+.input-group .form-control {
+  border-radius: 12px 0 0 12px;
+  border: 2px solid #e0e7ff;
+  border-right: none;
+  padding: 20px 25px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+/* .input-group .form-control::after .input-group .form-control:focus{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg,white ,var(--secondary-color));
+  transition: width 0.3s ease;
+} */
+
+.input-group .form-control:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 4px rgba(77, 166, 255, 0.2);
+}
+
+.input-group-text {
+  border-radius: 0 12px 12px 0;
+  border: 2px solid #e0e7ff;
+  border-left: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  padding: 0 15px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  color: #7f8c8d;
+}
+
+.input-group-text:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+/* تصميم الأزرار */
+.auth-button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  margin-top: 15px;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(39, 100, 174, 0.2);
+  z-index: 1;
+}
+
+.auth-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.8s;
+  z-index: -1;
+}
+
+.auth-button:hover::before {
+  left: 100%;
+}
+
+.auth-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(39, 100, 174, 0.3);
+}
+
+.auth-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 10px rgba(39, 100, 174, 0.2);
+}
+
+.auth-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.create-account {
+  width: 100%;
+  padding: 14px;
+  background: transparent;
+  color: #152739;
+  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.create-account::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgba(21, 95, 170, 0.304);
+  transition: width 1.2s ease;
+  z-index: -1;
+}
+
+.create-account:hover::before {
+  width: 100%;
+}
+
+.create-account:hover {
+  color: white;
+}
+
+/* Spinner animation */
+.spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Remember me checkbox */
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #34495e;
+}
+
+.remember-me input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 2px solid #d1d8e0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.remember-me input[type="checkbox"]:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Links and buttons */
+.forget-password {
+  display: inline-block;
+  /* margin-top: 15px; */
+  margin: 15px auto 0 auto;
+  font-size: 1.1rem;
+  color: #152739;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  background: none;
+  border: none;
+  padding: 5px;
+  position: relative;
+  font-weight: 500;
+  text-align: center;
+  width: auto;
+}
+
+.forget-password::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, white, var(--secondary-color));
+  transition: width 0.7s ease;
+}
+
+.forget-password:hover::after {
+  width: 100%;
+}
+
+.forget-password:hover {
+  color: white;
+}
+/* Responsive design */
+@media (max-width: 768px) {
+  .login-form {
+    padding: 30px 20px;
+  }
+
+  .login-form h2 {
+    font-size: 1.8rem;
+  }
+
+  .decor-element {
+    opacity: 0.3;
+  }
+
+  .circle-1 {
+    right: 5%;
+  }
+
+  .circle-2 {
+    left: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 15px;
+  }
+
+  .login-form {
+    padding: 25px 15px;
+  }
+
+  .login-form h2 {
+    font-size: 1.6rem;
+  }
+
+  .login-form input,
+  .login-form select,
+  .input-group .form-control {
+    padding: 12px 16px;
+    font-size: 1rem;
+  }
+
+  .auth-button,
+  .create-account {
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  .circle-1,
+  .circle-2,
+  .circle-3 {
+    display: none; /* إخفاء الدوائر في الشاشات الصغيرة */
+  }
+}
+
+/* FormSignStylee.css - إضافة هذه الأنماط */
+
+.input-group-text {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid #e0e7ff;
+  border-right: none;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  color: #7f8c8d;
+}
+
+.input-group > .input-group-text:first-child {
+  border-radius: 12px 0 0 12px;
+}
+
+.input-group > .form-control:not(:first-child) {
+  border-left: none;
+  border-radius: 0 12px 12px 0;
+}
+
+.input-group > .form-control:not(:last-child) {
+  border-right: none;
+}
+
+.input-group > .input-group-text:last-child {
+  border-radius: 0 12px 12px 0;
+  border-left: none;
+  border-right: 2px solid #e0e7ff;
+}
+
+.input-group:focus-within .input-group-text {
+  border-color: var(--secondary-color);
+}
+
+.input-group-text i {
+  font-size: 1.2rem;
+}
+
+/* أنماط مخصصة للأيقونات داخل الحقول */
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7f8c8d;
+  z-index: 2;
+  font-size: 1.2rem;
+}
+
+.input-with-icon input {
+  padding-left: 45px !important;
+}
+
+.input-with-icon .input-group-text {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  z-index: 2;
+  padding: 0;
+  color: #7f8c8d;
+}
+
+/* تعديلات خاصة بحقول كلمة المرور */
+.password-field.input-with-icon input {
+  padding-right: 45px !important;
+}
+
+.password-field .input-group-text {
+  cursor: pointer;
+}
+
+.password-field .input-group-text:hover {
+  color: var(--primary-color);
+}

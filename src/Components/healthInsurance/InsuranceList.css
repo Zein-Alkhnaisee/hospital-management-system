@@ -1,0 +1,187 @@
+.hi-list-card {
+  margin-top: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #dee2e6;
+}
+
+.hi-list-header {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.hi-list-header h5 {
+  margin: 0;
+  color: #0f5092;
+  font-weight: 600;
+}
+
+.hi-list-body {
+  padding: 0;
+  background-color: #fff;
+}
+
+.hi-list-group {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hi-list-item {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #dee2e6;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hi-list-item:last-child {
+  border-bottom: none;
+}
+
+.hi-list-item:hover {
+  background-color: #f8f9fa;
+}
+
+.hi-list-item.active {
+  background-color: #e8f4ff;
+  border-left: 4px solid #4da6ff;
+}
+
+.hi-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.hi-item-main {
+  flex: 1;
+}
+
+.hi-item-title {
+  margin: 0 0 0.5rem 0;
+  color: #0f5092;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hi-active-badge {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.hi-item-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.hi-status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.hi-status-approved {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.hi-status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.hi-status-rejected {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.hi-date-text {
+  color: #6c757d;
+  font-size: 0.875rem;
+}
+
+.hi-delete-btn {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  border: none;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.hi-delete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.4);
+}
+
+.hi-delete-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.hi-delete-spinner {
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: hi-spin 1s linear infinite;
+  display: inline-block;
+  margin-right: 0.25rem;
+}
+
+.hi-empty-message {
+  padding: 2rem;
+  text-align: center;
+  color: #6c757d;
+}
+.hi-view-btn {
+  background-color: #0d6efd; 
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.hi-view-btn:hover {
+  background-color: #0b5ed7; 
+}
+
+.hi-view-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .hi-item-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .hi-item-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .hi-delete-btn {
+    align-self: flex-end;
+  }
+}

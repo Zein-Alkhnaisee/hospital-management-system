@@ -1,0 +1,152 @@
+.invoice-list-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 90px;
+  padding: 20px;
+}
+
+.invoice-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.invoice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.invoice-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.invoice-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.invoice-info {
+  flex: 1;
+}
+
+.invoice-id {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.appointment-date,
+.doctor-name {
+  font-size: 14px;
+  color: #718096;
+  margin-bottom: 5px;
+}
+
+.invoice-status-container {
+  text-align: right;
+}
+
+.invoice-status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.invoice-status.pending {
+  background-color: #fed7d7;
+  color: #c53030;
+}
+
+.invoice-status.partial {
+  background-color: #feebcb;
+  color: #d69e2e;
+}
+
+.invoice-status.paid {
+  background-color: #c6f6d5;
+  color: #2f855a;
+}
+
+.total-amount {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 4px;
+}
+
+.paid-amount,
+.remaining-amount {
+  font-size: 14px;
+  color: #718096;
+  margin-bottom: 2px;
+}
+
+.invoice-actions {
+  text-align: right;
+}
+
+.details-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4299e1;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.details-button:hover {
+  background-color: #3182ce;
+}
+
+.no-invoices {
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.invoice-loading,
+.invoice-error {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+}
+
+.invoice-error {
+  color: #e53e3e;
+}
+
+@media (max-width: 768px) {
+  .invoice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .invoice-header {
+    flex-direction: column;
+  }
+
+  .invoice-status-container {
+    text-align: left;
+    margin-top: 15px;
+  }
+}

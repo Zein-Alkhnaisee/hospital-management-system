@@ -1,0 +1,548 @@
+.seminars-page,
+.my-seminars-page {
+  /* display: block; */
+  padding: 50px 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 2.5rem;
+}
+
+.page-subtitle {
+  text-align: center;
+  color: #7f8c8d;
+  margin-bottom: 40px;
+  font-size: 1.2rem;
+}
+
+.seminars-grid,
+.registrations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.error {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.2rem;
+  margin-top: 80px;
+}
+
+/* .loading {
+  color: #3498db;
+  margin-top: 120px;
+} */
+
+.seminarpage-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  text-align: center;
+  margin-top: 50px;
+}
+.seminarpage-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(15, 80, 146, 0.1);
+  border-top: 4px solid var(--primary-color);
+  border-radius: 50%;
+  animation: wallet-spin 1s linear infinite;
+  margin-bottom: 1.5rem;
+}
+
+.seminarpage-loading-text {
+  color: var(--title-color);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.error {
+  color: #e74c3c;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #3498db;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.details-btn {
+  background-color: #3498db;
+  color: white;
+  width: 100%;
+}
+
+.details-btn:hover {
+  background-color: #2980b9;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.register-btn,
+.view-my-seminars-btn,
+.update-btn,
+.delete-btn,
+.doctor-btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.register-btn {
+  background-color: #27ae60;
+  color: white;
+}
+
+.register-btn:hover {
+  background-color: #219653;
+}
+
+.register-btn:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.view-my-seminars-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.view-my-seminars-btn:hover {
+  background-color: #2980b9;
+}
+
+.update-btn {
+  background-color: #f39c12;
+  color: white;
+}
+
+.update-btn:hover {
+  background-color: #d35400;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.doctor-btn {
+  background-color: #9b59b6;
+  color: white;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.doctor-btn:hover {
+  background-color: #8e44ad;
+}
+
+.registered-badge {
+  background-color: #27ae60;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.no-seminars {
+  text-align: center;
+  padding: 50px 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.no-seminars i {
+  font-size: 3rem;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+.no-seminars h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.no-seminars p {
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+/* بطاقة الندوة */
+.seminar-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.seminar-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  position: relative;
+}
+
+.seminar-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.price-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.price-tag.paid {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.price-tag.free {
+  background-color: #27ae60;
+  color: white;
+}
+
+.card-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.seminar-date {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.seminar-title {
+  color: #2c3e50;
+  margin: 10px 0;
+  font-size: 1.3rem;
+}
+
+.seminar-location {
+  color: #7f8c8d;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.seminar-stats {
+  display: flex;
+  gap: 15px;
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid #ecf0f1;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.card-footer {
+  padding: 0 20px 20px;
+}
+
+/* صفحة تفاصيل الندوة */
+.seminar-detail-page {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+}
+
+.seminar-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.seminar-meta {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.seminar-type {
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.seminar-type.online {
+  background-color: #3498db;
+  color: white;
+}
+
+.seminar-type.offline {
+  background-color: #9b59b6;
+  color: white;
+}
+
+.seminar-content {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.seminar-image-container {
+  margin-bottom: 30px;
+}
+
+.seminar-image-container img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.detail-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.detail-item i {
+  font-size: 1.5rem;
+  color: #3498db;
+  min-width: 40px;
+}
+
+.detail-item h3 {
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.detail-item p {
+  margin: 0;
+  color: #7f8c8d;
+}
+
+.capacity-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.capacity-progress {
+  height: 100%;
+  background-color: #27ae60;
+  border-radius: 5px;
+}
+
+.seminar-description {
+  margin-top: 30px;
+}
+
+.seminar-description h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.seminar-description p {
+  color: #7f8c8d;
+  line-height: 1.8;
+}
+
+/* صفحة تفاصيل التسجيل */
+.registration-detail-page {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+  margin-top: 50px;
+}
+
+.registration-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.registration-id {
+  color: #7f8c8d;
+  font-size: 1rem;
+}
+
+.registration-content {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+@media (min-width: 992px) {
+  .registration-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.seminar-info,
+.registration-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.seminar-image-container {
+  margin-bottom: 20px;
+}
+
+.seminar-image-container img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.registration-details h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.paid-amount {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #27ae60;
+}
+
+.status {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.status.active {
+  background-color: #d5f5e3;
+  color: #27ae60;
+}
+
+.update-form {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.update-form h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.save-btn {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+}
+
+.cancel-btn {
+  background-color: #95a5a6;
+  color: white;
+  border: none;
+}

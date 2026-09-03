@@ -1,0 +1,67 @@
+.mission-section {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlay {
+  background: #3399ff27;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  max-width: 700px;
+}
+
+.typing-text {
+  font-size: 24px;
+  font-family: "Cairo", sans-serif;
+  white-space: pre-wrap;
+  min-height: 100px;
+  caret-color: transparent;
+}
+
+.cursor {
+  display: inline-block;
+  width: 1px;
+  background-color: white;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.icon-row {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.icon-card {
+  background: white;
+  color: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.icon-card:hover {
+  transform: scale(1.1);
+}

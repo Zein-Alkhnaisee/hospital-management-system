@@ -1,0 +1,164 @@
+.hi-details-card {
+  margin-top: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #dee2e6;
+}
+
+.hi-details-header {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #dee2e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hi-details-header h5 {
+  margin: 0;
+  color: #0f5092;
+  font-weight: 600;
+}
+
+.hi-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #6c757d;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.hi-close-btn:hover {
+  color: #0f5092;
+}
+
+.hi-details-body {
+  padding: 1.5rem;
+  background-color: #fff;
+}
+
+.hi-details-row {
+  margin-bottom: 1.5rem;
+}
+
+.hi-detail-item {
+  margin-bottom: 0.8rem;
+}
+
+.hi-detail-item strong {
+  color: #0f5092;
+  min-width: 140px;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.hi-image-container {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.hi-document-image {
+  max-height: 200px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.hi-view-image-btn {
+  background: linear-gradient(135deg, #4da6ff 0%, #3399ff 100%);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hi-view-image-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(77, 166, 255, 0.4);
+  color: white;
+}
+
+.hi-status-alert {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.hi-action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.hi-edit-btn {
+  background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);
+  border: none;
+  color: #212529;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.hi-edit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 193, 7, 0.4);
+}
+
+.hi-delete-btn {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.hi-delete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.4);
+}
+
+.hi-delete-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.hi-delete-spinner {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: hi-spin 1s linear infinite;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .hi-details-row {
+    flex-direction: column;
+  }
+
+  .hi-action-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hi-action-buttons button {
+    width: 100%;
+  }
+}

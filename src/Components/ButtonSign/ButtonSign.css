@@ -1,0 +1,107 @@
+/* التنسيق العام لكل الأزرار CTA */
+.cta-button {
+  background: linear-gradient(to right, var(--bg-color), #ffffff);
+  color: #333;
+  padding: 1.1rem 3rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.7s ease;
+  box-shadow: 0 3px 6px var(--title-color);
+  margin: 4rem auto 2rem;
+  display: inline-block;
+  text-decoration: none;
+}
+.cta-button:hover {
+  color: white;
+  transform: translateY(-4px);
+  box-shadow: 0 7px 13px #2c2e2d;
+  /* background: linear-gradient(#418f60, #368e59); */
+  background: linear-gradient(
+    135deg,
+    #068aef,
+    #1b92ed,
+    #2b98ec,
+    #4aa7ee,
+    #57aaea,
+    #68b0e7,
+    #79b5e4
+  );
+  text-decoration: none;
+  background-size: 600% 600%;
+  animation: changecolor 3s ease infinite;
+}
+
+/* زر الهيرو */
+.hero-cta-button {
+  background: linear-gradient(#ffffff, var(--primary-color));
+  color: #333;
+  padding: 1.3rem 3.5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: all 0.6s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  display: inline-block;
+  /* margin-top: 0.5rem; */
+  margin-right: 1rem;
+}
+.hero-cta-button:hover {
+  text-decoration: none;
+  color: white;
+  transform: scale(1.05);
+  background: linear-gradient(
+    135deg,
+    #068aef,
+    #1b92ed,
+    #2b98ec,
+    #4aa7ee,
+    #57aaea,
+    #68b0e7,
+    #79b5e4
+  );
+  background-size: 600% 600%;
+  animation: changecolor 3s ease infinite;
+}
+
+/* زر ضمن كرت خدمة */
+.cta-service {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  background-color: #2196f3;
+}
+
+.cta-service:hover {
+  background-color: #1e88e5;
+}
+
+/* زر الفوتر */
+.cta-footer {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background-color: transparent;
+  border: 2px solid #4caf50;
+  color: #4caf50;
+}
+
+.cta-footer:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+@keyframes changecolor {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

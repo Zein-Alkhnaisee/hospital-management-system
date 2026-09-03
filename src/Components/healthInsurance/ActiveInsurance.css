@@ -1,0 +1,83 @@
+.hi-active-insurance-card {
+  border: 1px solid #28a745 !important;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hi-active-insurance-header {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hi-active-insurance-header h5 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.hi-active-insurance-body {
+  padding: 1.5rem;
+  background-color: #fff;
+}
+
+.hi-insurance-detail {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.hi-insurance-detail strong {
+  color: #0f5092;
+  min-width: 160px;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.hi-status-badge {
+  background-color: #28a745;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.hi-delete-btn {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(220, 53, 69, 0.3);
+}
+
+.hi-delete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.4);
+}
+
+@media (max-width: 768px) {
+  .hi-active-insurance-body .row {
+    flex-direction: column;
+  }
+
+  .hi-active-insurance-body .text-end {
+    text-align: left !important;
+    margin-top: 1rem;
+  }
+
+  .hi-insurance-detail {
+    flex-direction: column;
+  }
+
+  .hi-insurance-detail strong {
+    min-width: auto;
+    margin-bottom: 0.25rem;
+  }
+}

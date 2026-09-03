@@ -1,0 +1,321 @@
+/* الصفحة الرئيسية */
+.doctor-page {
+  padding: 40px 20px;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.doctor-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #3498db;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.back-btn:hover {
+  background: #f0f7ff;
+}
+
+/* قسم الملف الشخصي */
+.doctor-profile-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.doctor-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.doctor-image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #f1f9ff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-basic-info {
+  flex: 2;
+  min-width: 300px;
+}
+
+.doctor-basic-info h2 {
+  margin-top: 0;
+  color: #2c3e50;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  border-left: 4px solid #3498db;
+}
+
+.label {
+  font-weight: bold;
+  color: #7f8c8d;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.value {
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+/* قسم التخصص */
+.doctor-specialty {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.doctor-specialty h2 {
+  margin-top: 0;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+.specialty-card {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.specialty-image {
+  flex: 1;
+  max-width: 300px;
+}
+
+.specialty-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.specialty-info {
+  flex: 2;
+}
+
+.specialty-info h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.description {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.view-specialty-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #3498db;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+  font-weight: 500;
+}
+
+.view-specialty-btn:hover {
+  background: #2980b9;
+}
+
+/* قسم السيرة الذاتية */
+.doctor-bio {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.doctor-bio h2 {
+  margin-top: 0;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.doctor-bio p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+/* قسم التقييمات */
+.ratings-section {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+}
+
+.ratings-section h2 {
+  margin-top: 0;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+/* أنماط التحميل والأخطاء */
+.doctor-loading,
+.doctor-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.doctor-loading .spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.doctor-error {
+  background-color: #fff8f8;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-error h3 {
+  color: #e74c3c;
+  margin-bottom: 15px;
+}
+
+.doctor-error p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.error-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.back-btn,
+.retry-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.back-btn {
+  background: #3498db;
+  color: white;
+}
+
+.back-btn:hover {
+  background: #2980b9;
+}
+
+.retry-btn {
+  background: #2ecc71;
+  color: white;
+}
+
+.retry-btn:hover {
+  background: #27ae60;
+}
+
+@media (max-width: 768px) {
+  .doctor-profile-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .doctor-image {
+    margin-bottom: 20px;
+  }
+  
+  .specialty-card {
+    flex-direction: column;
+  }
+  
+  .specialty-image {
+    max-width: 100%;
+  }
+  
+  .ratings-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .add-rating-btn {
+    width: 100%;
+  }
+}

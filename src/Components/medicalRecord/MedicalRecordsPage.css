@@ -1,0 +1,219 @@
+.medical-records-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.medical-records-container h1 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #6c757d;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.records-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.record-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.record-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.record-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #4a6fa5;
+  color: white;
+}
+
+.record-date {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.record-status .status-paid {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.record-status .status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.record-body {
+  padding: 1.5rem;
+}
+
+.doctor-info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.doctor-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-initials {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #4a6fa5;
+}
+
+.doctor-details h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.specialty {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.diagnosis-summary h4 {
+  color: #4a6fa5;
+  margin-bottom: 0.5rem;
+}
+
+.diagnosis-summary p {
+  color: #495057;
+  line-height: 1.6;
+}
+
+.record-meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.meta-item {
+  background-color: #f8f9fa;
+  padding: 0.8rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.meta-item span:first-child {
+  color: #6c757d;
+}
+
+.record-footer {
+  padding: 1rem 1.5rem;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.view-record-btn {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background-color: #4a6fa5;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.view-record-btn:hover {
+  background-color: #3a5a80;
+}
+
+.no-records {
+  text-align: center;
+  padding: 3rem;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+}
+
+.no-records p {
+  color: #6c757d;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(74, 111, 165, 0.2);
+  border-top: 5px solid #4a6fa5;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error-container {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fff8f8;
+  border-radius: 10px;
+  border-left: 4px solid #e63946;
+}
+
+.error-container p {
+  color: #e63946;
+  margin-bottom: 1.5rem;
+}
+
+.error-container button {
+  padding: 0.6rem 1.2rem;
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 0.5rem;
+}

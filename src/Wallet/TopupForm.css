@@ -1,0 +1,147 @@
+.wallet-topup-form-container {
+  margin-top: 110px;
+  background: var(--bg-color);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.wallet-topup-form-card {
+  background: var(--card-bg);
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.wallet-topup-form-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.wallet-topup-form-card-body {
+  padding: 2rem;
+}
+
+.wallet-topup-form-title {
+  color: var(--title-color);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.wallet-topup-form-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--title-color));
+  border-radius: 2px;
+}
+
+.wallet-topup-form-label {
+  color: var(--title-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.wallet-topup-form-input {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.wallet-topup-form-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(77, 166, 255, 0.25);
+  outline: none;
+}
+
+.wallet-topup-form-input-error {
+  border-color: #dc3545;
+}
+
+.wallet-topup-form-feedback {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.wallet-topup-form-image-preview {
+  max-width: 200px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.5rem;
+  background: #f8f9fa;
+  margin-top: 0.5rem;
+}
+
+.wallet-topup-form-submit-btn {
+  background: linear-gradient(135deg, var(--primary-color), var(--title-color));
+  border: none;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.wallet-topup-form-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(77, 166, 255, 0.4);
+}
+
+.wallet-topup-form-submit-btn:disabled {
+  opacity: 0.7;
+  transform: none;
+}
+
+.wallet-topup-form-cancel-btn {
+  background: transparent;
+  border: 2px solid #6c757d;
+  color: #6c757d;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.wallet-topup-form-cancel-btn:hover {
+  background: #6c757d;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.wallet-topup-form-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .wallet-topup-form-buttons {
+    flex-direction: column;
+  }
+
+  .wallet-topup-form-cancel-btn {
+    margin-left: 0;
+  }
+
+  .wallet-topup-form-image-preview {
+    max-width: 100%;
+  }
+}

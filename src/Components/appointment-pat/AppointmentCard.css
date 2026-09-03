@@ -1,0 +1,135 @@
+.appointment-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.appointment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.appointment-header {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date-time {
+  display: flex;
+  gap: 1rem;
+}
+
+.date {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.time {
+  color: #4a6fa5;
+  font-weight: 500;
+}
+
+.status {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-confirmed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-completed {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.status-cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.appointment-body {
+  padding: 1.5rem;
+}
+
+.doctor-info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.doctor-image {
+  width: 40px;
+  height: 190px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.doctor-image img {
+  width: 50%;
+  height: 75%;
+  object-fit: cover;
+}
+
+.doctor-details h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+.specialty {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.appointment-meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
+
+.meta-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.meta-item span:first-child {
+  color: #6c757d;
+}
+
+.meta-item span:last-child {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.appointment-footer {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.view-details-button {
+  color: #4a6fa5;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.view-details-button:hover {
+  color: #3a5a80;
+}

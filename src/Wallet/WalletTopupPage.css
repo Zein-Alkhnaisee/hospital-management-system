@@ -1,0 +1,88 @@
+.wallet-topup-page-container {
+  padding-top: 110px;
+  background: var(--bg-color);
+  min-height: 100vh;
+}
+
+.wallet-topup-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 20px;
+}
+
+.wallet-topup-page-title {
+  color: var(--primary-color);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.wallet-topup-page-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--title-color));
+  border-radius: 2px;
+}
+
+.wallet-topup-page-back-btn {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.wallet-topup-page-back-btn:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(77, 166, 255, 0.3);
+}
+
+.wallet-topup-page-new-btn {
+  background: linear-gradient(135deg, var(--primary-color), var(--title-color));
+  border: none;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.wallet-topup-page-new-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(77, 166, 255, 0.4);
+}
+
+.wallet-topup-page-new-btn:disabled {
+  opacity: 0.7;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .wallet-topup-page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0 15px;
+  }
+
+  .wallet-topup-page-title {
+    font-size: 1.8rem;
+  }
+}

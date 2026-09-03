@@ -1,0 +1,391 @@
+/* ملف تنسيقات شامل لصفحات الملف الشخصي */
+:root {
+    --title-color: #0f5092;
+    --primary-color: #4da6ff;
+    --primary-hover: #3399ff;
+    --bg-color: #ecf4fc;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --border-color: #d1e6ff;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --shadow: 0 5px 15px rgba(14, 80, 146, 0.15);
+    --transition: all 0.3s ease;
+  }
+  
+  /* تنسيقات عامة */
+  .profile-container {
+    max-width: 800px;
+    margin: 120px auto 40px;
+    padding: 0 20px;
+  }
+  
+  .profile-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+  }
+  
+  .profile-header h2 {
+    color: var(--title-color);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .profile-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--title-color));
+    border-radius: 2px;
+  }
+  
+  .profile-header p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+  
+  /* تنسيقات البطاقات */
+  .profile-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+  }
+  
+  .profile-card:hover {
+    box-shadow: 0 10px 25px rgba(14, 80, 146, 0.2);
+    background-color: var(--bg-color);
+  }
+  
+  /* تنسيقات النماذج */
+  .profile-form .form-label {
+    font-weight: 600;
+    color: var(--title-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .profile-form .form-control,
+  .profile-form .form-select {
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: var(--transition);
+  }
+  
+  .profile-form .form-control:focus,
+  .profile-form .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(77, 166, 255, 0.25);
+  }
+  
+  .profile-form textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  /* تنسيقات الأزرار */
+  .profile-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: var(--transition);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .profile-btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--title-color));
+    color: white;
+  }
+  
+  .profile-btn-primary:hover {
+    background: linear-gradient(135deg, var(--primary-hover), #0d4485);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(14, 80, 146, 0.3);
+  }
+  
+  .profile-btn-success {
+    background: linear-gradient(135deg, var(--success-color), #1e7e34);
+    color: white;
+  }
+  
+  .profile-btn-success:hover {
+    background: linear-gradient(135deg, #34ce57, #1c7430);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+  }
+  
+  .profile-btn-danger {
+    background: linear-gradient(135deg, var(--danger-color), #bd2130);
+    color: white;
+  }
+  
+  .profile-btn-danger:hover {
+    background: linear-gradient(135deg, #e04b59, #a71e2a);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
+  }
+  
+  .profile-btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+  }
+  
+  .profile-btn-outline:hover {
+    background: var(--primary-color);
+    color: white;
+  }
+  
+  /* تنسيقات صورة الملف الشخصي */
+  .profile-image-container {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--border-color);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    margin: auto;
+  }
+  
+  .profile-image:hover {
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+  }
+  
+  .profile-image-upload {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .profile-image-upload::after {
+    content: '📷 تغيير الصورة';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    font-size: 0.8rem;
+    border-radius: 0 0 15px 15px;
+    opacity: 0;
+    transition: var(--transition);
+  }
+  
+  .profile-image-upload:hover::after {
+    opacity: 1;
+  }
+  
+  /* تنسيقات قائمة البيانات */
+  .profile-data-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .profile-data-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    transition: var(--transition);
+  }
+  
+  .profile-data-item:hover {
+    background-color: var(--bg-color);
+  }
+  
+  .profile-data-item:last-child {
+    border-bottom: none;
+  }
+  
+  .profile-data-label {
+    font-weight: 600;
+    color: var(--title-color);
+    min-width: 150px;
+  }
+  
+  .profile-data-value {
+    color: var(--text-color);
+    text-align: right;
+    flex: 1;
+  }
+  
+  /* تنسيقات حالة التحميل */
+  .profile-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+  }
+  
+  .profile-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid var(--bg-color);
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    animation: profile-spin 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+  
+  @keyframes profile-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* تنسيقات التنبيهات */
+  .profile-alert {
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid;
+  }
+  
+  .profile-alert-success {
+    background-color: rgba(40, 167, 69, 0.1);
+    border-color: var(--success-color);
+    color: #155724;
+  }
+  
+  .profile-alert-danger {
+    background-color: rgba(220, 53, 69, 0.1);
+    border-color: var(--danger-color);
+    color: #721c24;
+  }
+  
+  .profile-alert-warning {
+    background-color: rgba(255, 193, 7, 0.1);
+    border-color: var(--warning-color);
+    color: #856404;
+  }
+  
+  /* تنسيقات زر الحذف */
+  .delete-confirmation {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #fff, var(--bg-color));
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+  }
+  
+  .delete-warning-icon {
+    font-size: 3rem;
+    color: var(--danger-color);
+    margin-bottom: 1rem;
+  }
+  
+  /* تأثيرات خاصة */
+  .gradient-border {
+    position: relative;
+    background: var(--card-bg);
+    border-radius: 15px;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--primary-color), var(--title-color), var(--primary-color));
+    border-radius: 17px;
+    z-index: -1;
+    animation: border-animation 3s ease infinite;
+    background-size: 200% 200%;
+  }
+  
+  @keyframes border-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* تنسيقات للهواتف */
+  @media (max-width: 768px) {
+    .profile-container {
+      margin-top: 100px;
+      padding: 0 15px;
+    }
+    
+    .profile-header h2 {
+      font-size: 1.8rem;
+    }
+    
+    .profile-card {
+      padding: 1.5rem;
+    }
+    
+    .profile-data-item {
+      flex-direction: column;
+    }
+    
+    .profile-data-label {
+      min-width: auto;
+      margin-bottom: 0.5rem;
+    }
+    
+    .profile-data-value {
+      text-align: left;
+    }
+    
+    .profile-image {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
+  /* تأثيرات للعناصر عند الظهور */
+  .fade-in {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .slide-in-left {
+    animation: slideInLeft 0.5s ease forwards;
+  }
+  
+  @keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 0.5s ease forwards;
+  }
+  
+  @keyframes slideInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }

@@ -1,0 +1,169 @@
+.slot-selection {
+  padding: 1rem;
+}
+
+.header-with-back {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.back-button {
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #3a5a80;
+}
+
+.slot-selection h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.8rem;
+}
+
+.date-selector {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.5rem 0;
+  margin-bottom: 1.5rem;
+}
+
+.date-button {
+  padding: 0.5rem 1rem;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 30px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.date-button.active {
+  background-color: #4a6fa5;
+  color: white;
+  border-color: #4a6fa5;
+}
+
+.time-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.time-slot-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.time-slot-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: #4a6fa5;
+}
+
+.slot-time {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.slot-details {
+  display: flex;
+  justify-content: space-between;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.slot-details .price {
+  color: #4a6fa5;
+  font-weight: bold;
+}
+
+.no-slots {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.no-slots p {
+  margin-bottom: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #3a5a80;
+}
+
+.error-container {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fff8f8;
+  border-radius: 10px;
+  border-left: 4px solid #e63946;
+}
+
+.error-container p {
+  color: #e63946;
+  margin-bottom: 1.5rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(74, 111, 165, 0.2);
+  border-top: 5px solid #4a6fa5;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

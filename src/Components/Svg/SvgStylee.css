@@ -1,0 +1,12 @@
+.wave-separator {
+  position: relative;
+  width: 100%;
+  margin-top: -5px;
+  background: linear-gradient(to right, #74b9ff, #4da6ff, #0a85ff);
+}
+
+.wave-separator svg {
+  display: block;
+  width: 100%;
+  height: 80px;
+}

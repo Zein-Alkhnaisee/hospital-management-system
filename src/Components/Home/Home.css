@@ -1,0 +1,7 @@
+.home {
+    background: linear-gradient(to right, var(--bg-color), #ffffff);
+    margin-top: 5.5rem;
+}
+#topHome {
+    scroll-margin-top: 80px !important;
+}
